@@ -11,34 +11,44 @@
 </head>
 
 <body>
-  <div class="container">
-    <section id="user-input" class="card">
-      <div class="control">
-        <label for="title">Favorite Movie</label>
-        <input type="text" id="title" />
+  <header>
+    <a href="https://all-projects-portfolio.web.app/" target="_blank" class="row">
+      <img class="logo-img" src="./assets/logo.svg" />
+      <div class="logo-txt">
+        <h1>FLAVIA</h1>
+        <span>Kosti</span>
       </div>
-      <div class="inline-controls">
+    </a>
+  </header>
+  <main>
+    <div class="container">
+      <section id="user-input" class="card">
         <div class="control">
-          <label for="extra-name">Release Date</label>
-          <input type="text" id="extra-name" />
+          <label for="title">Favorite Movie</label>
+          <input type="text" id="title" />
         </div>
-        <div class="control">
-          <label for="extra-value">Summary</label>
-          <textarea type="text" id="extra-value"></textarea>
+        <div class="inline-controls">
+          <div class="control">
+            <label for="extra-name">Release Date</label>
+            <input type="text" id="extra-name" />
+          </div>
+          <div class="control">
+            <label for="extra-value">Summary</label>
+            <textarea type="text" id="extra-value"></textarea>
+          </div>
         </div>
-      </div>
-      <button id="add-movie-btn">Add Movie</button>
-    </section>
-    <section id="filter" class="card">
-      <label for="filter-title">Filter by Title</label>
-      <input type="text" id="filter-title" />
-      <button id="search-btn">Search</button>
-    </section>
-  </div>
-
-  <div class="flex-column">
-    <ul id="movie-list" class="card"></ul>
-  </div>
+        <button id="add-movie-btn">Add Movie</button>
+      </section>
+      <section id="filter" class="card">
+        <label for="filter-title">Filter by Title</label>
+        <input type="text" id="filter-title" />
+        <button id="search-btn">Search</button>
+      </section>
+    </div>
+    <div class="flex-column">
+      <ul id="movie-list" class="card"></ul>
+    </div>
+  </main>
 </body>
 
 </html>

@@ -4,10 +4,14 @@
 
 html {
   font-family: sans-serif;
+  height: 100%;
 }
 
 body {
   margin: 0;
+}
+
+main {
   display: flex;
   justify-content: center;
 }
@@ -72,7 +76,7 @@ button:active {
 #filter {
   width: 50rem;
   max-width: 90%;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 #movie-list {
@@ -83,9 +87,8 @@ button:active {
 
 #movie-list.visible {
   display: block;
-  height: 100%;
   overflow: auto;
-  max-height: calc(100% - 4rem);
+  height: 37rem;
   background-color: #000000;
 }
 
@@ -133,13 +136,67 @@ button:active {
 
 textarea {
   width: 100%;
-  height: 32vh;
   border: 2px solid #ccc;
-  min-height: 7rem;
   margin-top: 1rem;
   resize: none;
+  min-height: 4rem;
 }
 
 textarea:focus-visible {
   outline: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  height: 35px;
+}
+
+.logo-txt {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  color: #292929;
+  align-items: flex-start;
+}
+
+.logo-img {
+  width: 2rem;
+  margin-right: 3px;
+}
+
+.logo-txt h1,
+.logo-txt span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+  color: #292929;
+}
+
+.logo-txt h1 {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.logo-txt span {
+  font-weight: lighter;
+  font-size: 0.85rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 1rem;
 }
