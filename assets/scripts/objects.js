@@ -22,17 +22,14 @@ const renderMovies = (filter = '') => {
   filteredMovies.forEach(movie => {
     const movieEl = document.createElement('li');
     const { info, ...otherProps } = movie;
-    console.log(otherProps);
-    // const { title: movieTitle } = info;
     let { getFormattedTitle } = movie;
-    // getFormattedTitle = getFormattedTitle.bind(movie);
-    let text = getFormattedTitle.apply(movie) + ' - ';
+    let text = `<h2 class='movie-title'>${getFormattedTitle.apply(movie)}</h2>`;
     for (const key in info) {
       if (key !== 'title' && key !== '_title') {
-        text = text + `${key}: ${info[key]}`;
+        text = text + `<span class='movie-release'>${key}</span><br/> <span class='movie-subtitle'>${info[key]}</span>`;
       }
     }
-    movieEl.textContent = text;
+    movieEl.innerHTML = text;
     movieList.append(movieEl);
   });
 };

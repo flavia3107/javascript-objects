@@ -8,6 +8,8 @@ html {
 
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 label {
@@ -28,16 +30,15 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #ff0062;
 }
 
 button {
   font: inherit;
-  border: 1px solid #ff0062;
+  border: 1px solid #35232a;
   color: white;
   padding: 1rem 2rem;
   border-radius: 5px;
-  background: #ff0062;
+  background: #35232a;
   cursor: pointer;
 }
 
@@ -47,8 +48,8 @@ button:focus {
 
 button:hover,
 button:active {
-  background: #ff3482;
-  border-color: #ff3482;
+  background: #4d323c;
+  border-color: #4d323c;
 }
 
 .card {
@@ -59,6 +60,7 @@ button:active {
 
 .inline-controls {
   display: flex;
+  flex-direction: column;
 }
 
 .control {
@@ -81,11 +83,63 @@ button:active {
 
 #movie-list.visible {
   display: block;
+  height: 100%;
+  overflow: auto;
+  max-height: calc(100% - 4rem);
+  background-color: #000000;
 }
 
 #movie-list li {
   margin: 1rem;
-  color: #ff0062;
-  font-weight: bold;
-  font-size: 1.5rem;
+  color: #9a9396;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  border-radius: 15px;
+  background: #242424;
+}
+
+.flex-column {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#user-input {
+  height: fit-content;
+}
+
+.movie-title {
+  font-size: 1.3rem;
+  color: #eff8ff;
+  margin: 0;
+}
+
+.movie-subtitle {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  color: #a0a0a0;
+  line-height: 1.3rem;
+}
+
+.movie-release {
+  margin-top: 0.7rem;
+  display: inline-block;
+  width: 100%;
+  color: #8b8b8b;
+}
+
+textarea {
+  width: 100%;
+  height: 32vh;
+  border: 2px solid #ccc;
+  min-height: 7rem;
+  margin-top: 1rem;
+  resize: none;
+}
+
+textarea:focus-visible {
+  outline: none;
 }

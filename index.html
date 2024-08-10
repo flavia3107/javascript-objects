@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Working with Objects</title>
-    <link rel="stylesheet" href="assets/styles/app.css" />
-    <script src="assets/scripts/objects.js" defer></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Working with Objects</title>
+  <link rel="stylesheet" href="assets/styles/app.css" />
+  <script src="assets/scripts/objects.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
     <section id="user-input" class="card">
       <div class="control">
         <label for="title">Favorite Movie</label>
@@ -16,12 +19,12 @@
       </div>
       <div class="inline-controls">
         <div class="control">
-          <label for="extra-name">Extra Information (Name)</label>
+          <label for="extra-name">Release Date</label>
           <input type="text" id="extra-name" />
         </div>
         <div class="control">
-          <label for="extra-value">Extra Information (Value)</label>
-          <input type="text" id="extra-value" />
+          <label for="extra-value">Summary</label>
+          <textarea type="text" id="extra-value"></textarea>
         </div>
       </div>
       <button id="add-movie-btn">Add Movie</button>
@@ -31,6 +34,11 @@
       <input type="text" id="filter-title" />
       <button id="search-btn">Search</button>
     </section>
+  </div>
+
+  <div class="flex-column">
     <ul id="movie-list" class="card"></ul>
-  </body>
+  </div>
+</body>
+
 </html>
