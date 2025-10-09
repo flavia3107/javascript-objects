@@ -6,18 +6,29 @@ const movies = [];
 
 const renderMovies = (filter = '') => {
   const movieList = document.getElementById('movie-list');
+  const emptyImg = document.querySelector('#empty');
 
   if (movies.length === 0) {
     movieList.classList.remove('visible');
+    emptyImg.style.display = 'block';
     return;
   } else {
     movieList.classList.add('visible');
+    emptyImg.style.display = 'none';
   }
   movieList.innerHTML = '';
 
   const filteredMovies = !filter
     ? movies
     : movies.filter(movie => movie.info.title.includes(filter));
+
+  if (filteredMovies.length === 0) {
+    movieList.classList.remove('visible');
+  } else {
+    movieList.classList.add('visible');
+  }
+
+  emptyImg.style.display = !filteredMovies.length ? 'block' : 'none';
 
   filteredMovies.forEach(movie => {
     const movieEl = document.createElement('li');

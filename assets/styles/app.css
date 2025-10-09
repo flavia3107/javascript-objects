@@ -98,7 +98,7 @@ button:active {
 #movie-list {
   display: none;
   list-style: none;
-  padding: 1rem;
+  padding: 0 1rem 0 0;
 }
 
 #movie-list.visible {
@@ -117,7 +117,7 @@ button:active {
   padding: 1rem;
   border-radius: 5px;
   background: #f1f1f1;
-  height: 10rem;
+  height: 15rem;
 }
 
 .flex-column {
@@ -135,8 +135,8 @@ button:active {
 }
 
 .movie-title {
-  font-size: 1.3rem;
-  color: #eff8ff;
+  font-size: 1rem;
+  color: #979797;
   margin: 0;
 }
 
@@ -146,6 +146,8 @@ button:active {
   display: inline-block;
   color: #a0a0a0;
   line-height: 1.3rem;
+  overflow: auto;
+  height: calc(100% - 4rem);
 }
 
 .movie-release {
@@ -162,10 +164,22 @@ textarea {
   resize: none;
   min-height: 10rem;
   border-radius: 5px;
+  padding: 1rem;
+  font-family: inherit;
 }
 
 textarea:focus-visible {
   outline: none;
+}
+
+.end {
+  justify-content: flex-end;
+  margin: 1rem 1rem 0 0;
+}
+
+.end button {
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .logo {
@@ -208,6 +222,25 @@ textarea:focus-visible {
 .logo-txt span {
   font-weight: lighter;
   font-size: 0.85rem;
+}
+
+::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  width: 9px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .row {
