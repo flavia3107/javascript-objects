@@ -25,11 +25,13 @@ label {
 input {
   font: inherit;
   border: none;
-  border-bottom: 2px solid #ccc;
-  color: #494949;
+  color: #232323;
   width: 100%;
   display: block;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  height: 3rem;
+  border-radius: 5px;
+  padding-left: 1rem;
 }
 
 input:focus {
@@ -77,6 +79,16 @@ button:active {
   width: 50rem;
   max-width: 90%;
   margin: 1rem auto;
+}
+
+#user-input {
+  background-color: #343434;
+  width: 30rem;
+}
+
+#user-input label {
+  color: #e0e0e0;
+  font-size: 0.9rem;
 }
 
 #movie-list {
@@ -136,10 +148,11 @@ button:active {
 
 textarea {
   width: 100%;
-  border: 2px solid #ccc;
-  margin-top: 1rem;
+  border: none;
+  margin-top: 0.5rem;
   resize: none;
-  min-height: 4rem;
+  min-height: 10rem;
+  border-radius: 5px;
 }
 
 textarea:focus-visible {
