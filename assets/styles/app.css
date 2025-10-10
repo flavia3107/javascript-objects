@@ -56,8 +56,18 @@ button:focus {
 
 button:hover,
 button:active {
-  background: #4d323c;
-  border-color: #4d323c;
+  background: #2c2c2c;
+  border-color: #2c2c2c;
+}
+
+#search-btn {
+  margin-left: 1rem;
+}
+
+#search-btn:hover,
+#search-btn:active {
+  background: transparent;
+  box-shadow: inset 0 0 3px 0px #a19e9e;
 }
 
 .card {
@@ -79,6 +89,7 @@ button:active {
   width: 50rem;
   max-width: 90%;
   margin: 1rem auto;
+  overflow: auto;
 }
 
 #filter {
@@ -162,7 +173,7 @@ textarea {
   border: none;
   margin-top: 0.5rem;
   resize: none;
-  min-height: 10rem;
+  height: calc(100vh - 32rem);
   border-radius: 5px;
   padding: 1rem;
   font-family: inherit;
@@ -254,4 +265,13 @@ a {
 
 header {
   padding: 1rem;
+}
+
+#empty {
+  display: block;
+  height: 50%;
+  position: absolute;
+  float: right;
+  top: 45%;
+  right: 5rem;
 }
