@@ -130,6 +130,8 @@ button:active {
   border-radius: 5px;
   background: #f1f1f1;
   height: 15rem;
+  max-width: 25rem;
+  overflow: auto;
 }
 
 .flex-column {
@@ -150,6 +152,7 @@ button:active {
   font-size: 1rem;
   color: #979797;
   margin: 0;
+  word-wrap: break-word;
 }
 
 .movie-subtitle {
@@ -160,6 +163,7 @@ button:active {
   line-height: 1.3rem;
   overflow: auto;
   height: calc(100% - 4rem);
+  word-wrap: break-word;
 }
 
 .movie-release {
@@ -167,6 +171,7 @@ button:active {
   display: inline-block;
   width: 100%;
   color: #8b8b8b;
+  word-wrap: break-word;
 }
 
 textarea {
@@ -178,6 +183,7 @@ textarea {
   border-radius: 5px;
   padding: 1rem;
   font-family: inherit;
+  word-wrap: break-word;
 }
 
 textarea:focus-visible {
@@ -237,6 +243,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   height: 93vh;
+  min-width: fit-content;
 }
 
 .placeholder {
