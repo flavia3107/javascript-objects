@@ -229,11 +229,22 @@ header {
   padding: 1rem;
 }
 
+.list-content {
+  margin-top: 1rem;
+  width: calc(100% - 40rem);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 93vh;
+}
+
+.placeholder {
+  margin-bottom: 1rem;
+  max-width: 40rem;
+}
+
 #empty {
-  display: block;
-  height: 50%;
-  position: absolute;
-  float: right;
-  top: 45%;
-  right: 5rem;
+  display: flex;
+  justify-content: flex-end;
 }
